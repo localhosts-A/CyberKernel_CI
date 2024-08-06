@@ -13,7 +13,7 @@ jobs:
     - name: 环境配置
       run: |
         cd /home/runner/
-        git clone https://github.com/localhosts-A/kernel_xiaomi_sm8250.git --depth=1 Kernel
+        git clone https://github.com/localhosts-A/kernel_xiaomi_sm8250.git -b Simple_LMK --depth=1 Kernel
         mkdir /home/runner/Clang && cd /home/runner/Clang
         wget https://github.com/ZyCromerZ/Clang/releases/download/20.0.0git-20240806-release/Clang-20.0.0git-20240806.tar.gz
         tar -xzvf Clang-20.0.0git-20240806.tar.gz && cd /home/runner/Kernel

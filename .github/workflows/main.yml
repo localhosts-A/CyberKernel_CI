@@ -12,14 +12,14 @@ jobs:
     steps:
     - name: 环境配置
       run: |
-        cd ~/
+        cd /home/runner/
         git clone https://github.com/localhosts-A/kernel_xiaomi_sm8250.git --depth=1 Kernel
-        mkdir ~/Clang && cd ~/Clang
+        mkdir /home/runner/Clang && cd /home/runner/Clang
         wget https://github.com/ZyCromerZ/Clang/releases/download/20.0.0git-20240806-release/Clang-20.0.0git-20240806.tar.gz
-        tar -xzvf Clang-20.0.0git-20240806.tar.gz && cd ~/Kernel
+        tar -xzvf Clang-20.0.0git-20240806.tar.gz && cd /home/runner/Kernel
         wget https://raw.githubusercontent.com/localhosts-A/CyberKernel_CI/master/CI.sh
 
     - name: 编译内核
       run: |
-        cd ~/Kernel
+        cd /home/runner/Kernel
         sh CI.sh
